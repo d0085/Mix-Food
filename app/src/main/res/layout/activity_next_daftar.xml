@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/redMix">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+
+            <EditText
+                android:id="@+id/textFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/rounded_edittext"
+                android:padding="7dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="76dp"
+                android:width="250dp"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/labelFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textFullName"
+                android:layout_alignStart="@+id/textFullName"
+                android:textColor="@color/black"
+                android:layout_marginBottom="40dp"
+                android:labelFor="@id/textFullName"
+                android:text="@string/full_name"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/textdob"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:background="@drawable/rounded_edittext"
+                android:padding="7dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textFullName"
+                android:layout_below="@+id/textFullName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:width="250dp"
+                android:onClick="showDate"
+                android:focusable="false"
+                android:ems="10"
+                android:inputType="date" />
+
+            <TextView
+                android:id="@+id/labeldob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textdob"
+                android:layout_alignStart="@+id/textdob"
+                android:layout_marginBottom="40dp"
+                android:labelFor="@id/textdob"
+                android:textColor="@color/black"
+                android:text="@string/date_of_birth"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/textNoHp"
+                android:textColor="@color/black"
+                android:background="@drawable/rounded_edittext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textdob"
+                android:layout_below="@+id/textdob"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:padding="7dp"
+                android:width="250dp"
+                android:ems="10"
+                android:digits="0123456789+"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/labelNoHp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/textNoHp"
+                android:layout_alignStart="@+id/textNoHp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="22dp"
+                android:labelFor="@+id/textNoHp"
+                android:text="No. HP"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/textAddress"
+                android:textColor="@color/black"
+                android:background="@drawable/rounded_edittext"
+                android:padding="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textNoHp"
+                android:layout_below="@+id/textNoHp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:width="250dp"
+                android:ems="10"
+                android:inputType="textPostalAddress" />
+
+            <TextView
+                android:id="@+id/labelAddress"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/textAddress"
+                android:layout_alignStart="@+id/textAddress"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="22dp"
+                android:labelFor="@+id/textAddress"
+                android:text="@string/address"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/daftarBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textAddress"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/rounded_edittext"
+                android:onClick="intentBuatAkun"
+                android:text="@string/daftar"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/textLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/daftarBtn"
+                android:onClick="intentLogin"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:text="@string/ingin_login" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>
