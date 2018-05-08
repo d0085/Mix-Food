@@ -35,7 +35,6 @@ public class NextDaftarActivity extends AppCompatActivity {
     private EditText phoneNum;
     private EditText address;
     private Button daftarBtn;
-    private String a;
 
     ProgressBar pb;
     DBStatus status;
