@@ -25,4 +25,8 @@
     <string name="sign_in">Sign In</string>
     <string name="went_wrong">Something went wrong</string>
     <string name="user_pass_mismatch">Username and password mismatch!</string>
+    <string name="username_taken">Username is taken!</string>
+    <string name="email_taken">E-Mail is taken!</string>
+    <string name="username_passed">Username passed</string>
+    <string name="e_mail_passed">E-Mail passed</string>
 </resources>
