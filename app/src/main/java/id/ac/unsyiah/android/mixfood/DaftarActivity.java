@@ -40,6 +40,7 @@ public class DaftarActivity extends AppCompatActivity {
         email = findViewById(R.id.textdob);
         pass = findViewById(R.id.textNoHp);
         confPass = findViewById(R.id.textAddress);
+
         progressBarUsername = findViewById(R.id.progressBarUsername);
         progressBarEmail = findViewById(R.id.progressBarEmail);
         daftarBtn = findViewById(R.id.daftarBtn);
@@ -52,6 +53,7 @@ public class DaftarActivity extends AppCompatActivity {
         emailCheck.setVisibility(View.INVISIBLE);
         usernameCheck.setVisibility(View.INVISIBLE);
         daftarBtn.setEnabled(false);
+
 
         username.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
