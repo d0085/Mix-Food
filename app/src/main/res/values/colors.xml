@@ -7,4 +7,5 @@
     <color name="redMix">#F44336</color>
     <color name="black">#000</color>
     <color name="grey">#EEEEEE</color>
+    <color name="darkGrey">#e2e1e1</color>
 </resources>
