@@ -1,6 +1,5 @@
 package id.ac.unsyiah.android.mixfood;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -40,7 +39,6 @@ public class DaftarActivity extends AppCompatActivity {
         email = findViewById(R.id.textdob);
         pass = findViewById(R.id.textNoHp);
         confPass = findViewById(R.id.textAddress);
-
         progressBarUsername = findViewById(R.id.progressBarUsername);
         progressBarEmail = findViewById(R.id.progressBarEmail);
         daftarBtn = findViewById(R.id.daftarBtn);
@@ -54,7 +52,6 @@ public class DaftarActivity extends AppCompatActivity {
         usernameCheck.setVisibility(View.INVISIBLE);
         daftarBtn.setEnabled(false);
 
-
         username.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean b) {
@@ -63,10 +60,12 @@ public class DaftarActivity extends AppCompatActivity {
                     if (editTextIsEmpty(username)) {
                         username.setError(getString(R.string.username_error_daftar));
                     } else {
+
                         UsernameCheckTask usernameCheckTask = new UsernameCheckTask();
                         usernameCheckTask.execute("http://cs.unsyiah.ac.id/~fdhari/ada_pelanggan.php", "username=" + username.getText().toString());
 
                         setDaftarBtnEnabled(usernameExists, emailExists);
+
                     }
 
                 }
@@ -81,10 +80,12 @@ public class DaftarActivity extends AppCompatActivity {
                     if (editTextIsEmpty(email)){
                         email.setError(getString(R.string.email_error));
                     } else {
+
                         EmailCheckTask task2 = new EmailCheckTask();
                         task2.execute("http://cs.unsyiah.ac.id/~fdhari/ada_pelanggan.php", "email=" + email.getText().toString());
 
                         setDaftarBtnEnabled(usernameExists, emailExists);
+
                     }
 
                 }
