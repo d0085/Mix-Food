@@ -43,7 +43,7 @@ public class NextDaftarActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        System.arraycopy(getIntent().getStringArrayExtra("DATA_DAFTAR1"), 0, data,0,3);
+        System.arraycopy(getIntent().getStringArrayExtra("DATA_DAFTAR"), 0, data,0,3);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_next_daftar);
