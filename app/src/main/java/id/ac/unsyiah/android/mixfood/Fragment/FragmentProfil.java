@@ -29,31 +29,31 @@ public class FragmentProfil extends Fragment{
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.profil_fragment,container,false);
-        btn = (Button) view.findViewById(R.id.signOutBtn);
-        pb = view.findViewById(R.id.progressBarProfil);
-        pb.setVisibility(View.INVISIBLE);
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                pb.setVisibility(View.VISIBLE);
-
-                btn.setEnabled(false);
-
-                SharedPreferences sharedPreferences = Utama.getSharedPreferences();
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.clear();
-                editor.apply();
-
-                Intent intent = new Intent(getContext(), LoginActivity.class);
-                getContext().startActivity(intent);
-                ((Activity)getContext()).finish();
-
-                btn.setEnabled(true);
-                pb.setVisibility(View.INVISIBLE);
-            }
-        });
+//        btn = (Button) view.findViewById(R.id.signOutBtn);
+//        pb = view.findViewById(R.id.progressBarProfil);
+//        pb.setVisibility(View.INVISIBLE);
+//
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                pb.setVisibility(View.VISIBLE);
+//
+//                btn.setEnabled(false);
+//
+//                SharedPreferences sharedPreferences = Utama.getSharedPreferences();
+//                SharedPreferences.Editor editor = sharedPreferences.edit();
+//                editor.clear();
+//                editor.apply();
+//
+//                Intent intent = new Intent(getContext(), LoginActivity.class);
+//                getContext().startActivity(intent);
+//                ((Activity)getContext()).finish();
+//
+//                btn.setEnabled(true);
+//                pb.setVisibility(View.INVISIBLE);
+//            }
+//        });
         return view;
     }
 }
